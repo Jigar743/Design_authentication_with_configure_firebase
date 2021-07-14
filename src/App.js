@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux";
+import { Route, Switch } from "react-router-dom";
+import Home from "./Components/Home";
+import Login from "./Authentication/Login";
+import ResetPassword from "./Authentication/ResetPassword";
+import Signup from "./Authentication/Signup";
 
 function App() {
+  const isAuthenticated = useSelector((state) => state.reducer.isAuthenticated);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route
+          path="/"
+          render={(props) => {
+            return isAuthenticated ? <Login /> : <Home {...props} />;
+          }}
+        />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
+        <Route path="/reset-password" component={ResetPassword} />
+      </Switch>
     </div>
   );
 }

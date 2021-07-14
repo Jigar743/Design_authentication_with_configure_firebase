@@ -1,0 +1,92 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(64, 223, 77, 0.808);
+}
+
+.toggle_button{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toggle-button__line{
+    height: 1.5px;
+    width: 100%;
+    background: black;
+}
+
+.toggle_button:focus{
+    outline: none;
+}
+
+.navbar__logo{
+    margin-left: 2.5rem;
+}
+
+.navbar__logo p{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.spacer{
+    flex: 1;
+}
+
+.Navbar_list_item li{
+    padding: 0 7px;
+}
+
+.navbar_navigation{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 35px;
+}
+
+.Navbar_list_item ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar_list_item a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.Navbar_list_item a:hover,
+.Navbar_list_item a:active,
+.Navbar_list_item a.active{
+    color: whitesmoke;
+    border-bottom: 0.2rem solid rgb(46, 45, 44);
+    transition: 0.3s ease-out;
+}
+
+@media (max-width : 756px){
+    .Navbar_list_item{
+        display: none;
+    }
+}
+
+@media screen and (min-width : 756px) {
+    .toggle_button{
+        display: none;
+        padding: 0;
+    }
+    .navbar__logo{
+        margin-left: 0;
+    }
+}

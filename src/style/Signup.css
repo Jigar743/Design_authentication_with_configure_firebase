@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
+}
+
+.error-block{
+  text-align: center;
+}
+
+.signup {
+  border: 1px solid rgb(143, 140, 140);
+  color: black;
+  width: 70%;
+  border: 1px solid rgba(169, 184, 183, 0.37);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.signup .header {
+  background-color: rgba(169, 184, 183, 0.37);
+  line-height: 100px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+.signup form {
+  padding-left: 20px;
+  line-height: 70px;
+}
+
+.signup .email,
+.signup .password {
+  width: 100%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.signup .header p {
+  font-size: 40px;
+  display: table-header-group;
+}
+
+.signup .email label,
+.signup .password label,
+.signup .name label,
+.signup .mobileno label {
+  padding-right: 20px;
+  width: 30%;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.signup .signup_btn {
+  margin: 10px;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: rgb(113, 201, 25);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.signup .signup_btn:hover {
+  background-color: rgb(83, 136, 30);
+}
+
+input {
+  display: inline-block;
+  width: 60%;
+  height: 35px;
+  font-size: 20px;
+  border: 1px solid rgba(40, 41, 41, 0.37);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+
+input::placeholder {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .signup {
+    width: 100%;
+  }
+  .signup .email label,
+  .signup .password label,
+  .signup .name label,
+  .signup .mobileno label {
+    width: 100%;
+  }
+  input {
+    width: 95%;
+  }
+  .signup .signup_btn {
+    width: 95%;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 886px) {
+  .signup {
+    width: 100%;
+  }
+  .signup .email label,
+  .signup .password label,
+  .signup .name label,
+  .signup .mobileno label {
+    width: 100%;
+  }
+  input {
+    width: 95%;
+  }
+}
+
+.login_page_link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.login_page_link a {
+  text-decoration: none;
+  color: rgb(84, 84, 243);
+}
